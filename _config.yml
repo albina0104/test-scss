@@ -1,3 +1,4 @@
 sass:
   sass_dir: "css"
   style: compressed
+  sourcemap: true
