@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+}
+
+.test {
+    color: purple;
+    &--class {
+        color: blue;
+    }
+}
