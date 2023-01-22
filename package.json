@@ -15,7 +15,7 @@
       "watch": "npm-run-all --parallel watch:*",
       "serve": "browser-sync start --server public --files public",
       "start": "npm-run-all copy --parallel watch serve",
-      "build": "npm run build:*"
+      "build": "npm-run-all build:*"
     },
     "dependencies": {
       "autoprefixer": "^10.4.2",
