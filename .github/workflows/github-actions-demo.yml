@@ -8,6 +8,7 @@ jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
     permissions:
+      idToken: write
       pages: write
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -28,5 +29,5 @@ jobs:
       - name: Deploy pages
         uses: actions/deploy-pages@v1
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
