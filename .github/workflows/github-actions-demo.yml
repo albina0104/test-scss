@@ -11,8 +11,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - run: echo "🖥️ The workflow is now ready to build your code on the runner."
+      - run: cd ${{ github.workspace }}
+      - run: npm run build
+      - name: Upload pages
+        uses: actions/upload-pages-artifact
+      - name: Deploy pages
+        uses: actions/deploy-pages
       - run: echo "🍏 This job's status is ${{ job.status }}."
