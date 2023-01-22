@@ -1,12 +1,14 @@
-name: GitHub Actions Demo
+name: GitHub Actions Build and Deploy
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
   push:
     branches:
       - master
 jobs:
-  Explore-GitHub-Actions:
+  Build-and-Deploy:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -25,4 +27,6 @@ jobs:
           path: ./site
       - name: Deploy pages
         uses: actions/deploy-pages@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
