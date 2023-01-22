@@ -5,7 +5,7 @@
     "main": "public/index.html",
     "author": "5t3ph",
     "scripts": {
-        "build:css": "sass --source-map css:css",
+        "build:css": "sass --source-map site/css:site/css",
         "copy:images": "copyfiles -u 1 ./src/images/**/* public",
         "copy:html": "copyfiles -u 1 ./src/*.html public",
         "copy": "npm-run-all --parallel copy:*",
