@@ -8,7 +8,7 @@ jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
     permissions:
-      idToken: write
+      id-token: write
       pages: write
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
