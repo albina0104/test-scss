@@ -19,7 +19,6 @@ jobs:
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to build your code on the runner."
       - run: cd ${{ github.workspace }}
-      - run: rm package.json
       - run: npm install -D npm-run-all sass
       - run: ls ./node_modules
       - run: npm run build
