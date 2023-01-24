@@ -5,11 +5,9 @@
     "main": "site/index.html",
     "author": "5t3ph",
     "scripts": {
-        "build:scss": "sass --source-map site/scss:site/css",
-        "build": "npm-run-all build:*"
+        "build": "sass --source-map site/scss:site/css"
     },
     "devDependencies": {
-        "npm-run-all": "^4.1.5",
         "sass": "^1.49.8"
     }
 }
