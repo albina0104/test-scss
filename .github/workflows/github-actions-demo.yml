@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "site/**"
 jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
