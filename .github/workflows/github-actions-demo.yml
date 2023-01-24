@@ -2,10 +2,8 @@ name: GitHub Actions Build and Deploy
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
   push:
-    branches:
-      - master
-    paths:
-      - "site/**"
+    branches: [ master ]
+    paths: "site/**"
 jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
@@ -21,6 +19,11 @@ jobs:
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to build your code on the runner."
       - run: cd ${{ github.workspace }}
+      - name: Change package.json
+        run: |
+          rm package.json package-lock.json
+          mv package-ci.json package.json
+          mv package-lock-ci.json package-lock.json
       - name: Cache dependencies
         id: cache-npm
         uses: actions/cache@v3
