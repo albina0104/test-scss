@@ -1,4 +1,4 @@
-# Test how .scss files work with GitHub Pages
+# Configuring GitHub Actions to compile .scss files
 
 ## Table of contents
 
