@@ -4,6 +4,7 @@ on:
   push:
     branches: [ master ]
     paths: "site/**"
+  workflow_dispatch:
 jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
